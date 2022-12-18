@@ -21,7 +21,6 @@ async function processForm(evt) {
       color: $("#color").val().toLowerCase(),
     },
   })
-
   const rd = response.data;
 
   ("error" in rd) ? showErrors(rd.error) : showResults(rd.num, rd.year);

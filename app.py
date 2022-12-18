@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from forms import LuckyNumForm
-from utilities import random_number, serialize_response
+from utilities import random_number, serialize_random_facts
 
 app = Flask(__name__)
 
@@ -30,7 +30,7 @@ def get_lucky():
     if form.validate():
         year = user_input["year"]
         num = random_number(1,100)
-        response = serialize_response(num, year)
+        response = serialize_random_facts(num, year)
 
         return jsonify(response)
 

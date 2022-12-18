@@ -20,8 +20,10 @@ def random_number(small, large):
     """
     return randint(small, large)
 
-def serialize_response(num, year):
-    """Create a response that can be easily converted into JSON."""
+def serialize_random_facts(num, year):
+    """Create a response of random facts from numbers API from
+    (num) and (year) input that can be easily converted into JSON.
+    """
     response = {
         "num": {
             "fact": get_num_fact(num),
