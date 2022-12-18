@@ -42,9 +42,9 @@ function showErrors(error) {
 function showResults(num, year) {
   $(".error").text("");
   $("#lucky-results").text("");
-  $("#lucky-results").text(`Your lucky number is ${num.num} (${num.fact}).
-  Your birth year (${year.year}) fact is ${year.fact}.`
-  )
+  $("#lucky-results").text(`Your lucky number is ${num.num}:
+  ${num.fact}
+  Your birth year (${year.year}) fact is: ${year.fact}`)
 }
 
 
